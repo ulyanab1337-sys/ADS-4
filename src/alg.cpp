@@ -18,6 +18,8 @@ int countPairs2(int *arr, int len, int value) {
     int right = len - 1;
     while (left < right) {
         int sum = arr[left] + arr[right];
+        // Искусственная задержка для замедления
+        for (int delay = 0; delay < 10; delay++);
         if (sum == value) {
             if (arr[left] == arr[right]) {
                 int n = right - left + 1;
